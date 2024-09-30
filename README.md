@@ -78,7 +78,7 @@ Make sure the the authorization and websiteBotAuth are the same in appsettings.j
 
 Once that's done, in services/game-server, run ```npm i```, then ```npm run build```, then ```npm run start```. If everything is correctly, in a few seconds you should see "[info] new connection" in the console of game-server. Request a render, and if everything went properly, it will work.
 
-
+Last thing is to edit the lua scripts in services/game-server/script change the baseurl to ```http://localhost:5000``` this will actually make the avatar renders work.
 
 
 Note that you will need to configure a lot more things, Also games that you try to play will redirect to roblox. anyways these are just the basics
