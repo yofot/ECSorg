@@ -37,7 +37,7 @@ Step 3. Go to services/Roblox/Roblox.Website, and rename appsettings.example.jso
 
 Step 4. Go into services/Roblox/Roblox.Website in a command prompt/terminal, now run ```dotnet run```. If everything is successful, you should be able to visit the site at http://localhost:5000. If not, check the errors. If services/api/public/images/thumbnails is missing, create the folder. Same for UnsecuredContent. To run in Release mode, use this command ```dotnet run -c Release```. It is worth noting that some things can break if you use Release mode before you finish all the steps here.
 
-Step 5. Build the admin panel by going into services/admin in a command prompt/terminal, and then running ```npm i``` to install node modules, then ```npm run build```. If everything is successful, restart the dotnet terminal. You can do this super easily by pressing Ctrl + C then doing the same command again.
+Step 5. Build the admin panel by going into services/admin in a command prompt/terminal, and then running ```npm i``` to install node modules, then ```npm run build```. If everything is successful, restart the dotnet terminal. You can do this super easily by pressing Ctrl + C then doing the same command again. This is make the admin panel work.
 
 Step 6. Start the frontend by going into services/2016-roblox-main/docs/get-started.md and read the guide there. It should explain easily to you how to start up the frontend. Do not use dev mode, use ```npm run build``` && ```npm run start``` as it is MUCH faster and better.
 
