@@ -82,4 +82,4 @@ Once that's done, in services/game-server, run ```npm i```, then ```npm run buil
 Step 9. To finish the frontend, open services/2016-roblox-main in a terminal, then run ```npm i``` this will show the main page.
 
 
-Note that you will need to configure a lot more things, these are just the basics.
+Note that you will need to configure a lot more things, Also games that you play will redirect to roblox. anyways these are just the basics
