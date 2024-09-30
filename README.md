@@ -78,6 +78,7 @@ Step 8. RCC/Rendering setup time: Go to services/RCCService, in a command prompt
 
 
 Once that's done, in services/game-server, run ```npm i```, then ```npm run build```, then ```npm run start```. If everything is correctly, in a few seconds you should see "[info] new connection" in the console of game-server. Request a render, and if everything went properly, it will work.
+
 Step 9. To finish the frontend, open services/2016-roblox-main in a terminal, then run ```npm i``` this will show the main page.
 
 
