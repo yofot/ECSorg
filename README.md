@@ -8,7 +8,7 @@ Economy Simulator is a ROBLOX revival that allows you to Relive Roblox 2016.
 # HOW TO RUN/BUILD/COMPILE
 
 You will need the following dependencies:
-- Windows + WSL or Linux (Currently Windows is more recommended and is easier)
+- Windows + WSL or Linux (only for redis and stuff. rest for windows)
 - PostgreSQL (Version 13+)
 - Redis-Server (WSL or Linux)
 - Node.js (Version 18.XX+)
