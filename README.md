@@ -8,7 +8,7 @@ Economy Simulator is a ROBLOX revival that allows you to Relive Roblox 2016.
 # HOW TO RUN/BUILD/COMPILE
 
 You will need the following dependencies:
-- Windows + WSL or Linux (only for redis and stuff. rest for windows)
+- Windows + WSL or Linux (only for redis. rest for windows)
 - PostgreSQL (Version 13+)
 - Redis-Server (WSL or Linux)
 - Node.js (Version 18.XX+)
@@ -41,12 +41,14 @@ Step 5. Build the admin panel by going into services/admin in a command prompt/t
 
 Step 6. Start the frontend by going into services/2016-roblox-main/docs/get-started.md and read the guide there. It should explain easily to you how to start up the frontend. Do not use dev mode, use ```npm run build``` && ```npm run start``` as it is MUCH faster and better.
 
+Step 7. To finish the frontend, open services/2016-roblox-main in a terminal, then run ```npm i``` this will show the main page and fix the Network error.
+
 Before we continue with setting up the site steps, it's time to register the first account. Go to http://localhost:5000/auth/application, now here's the tricky part.
 Without editing code, the only way to get autoaccepted is to have a Roblox account that meets the requirements to get autoaccepted, which are:
 - At least 1 year account age
 - Either: 20K+ followers, has admin badge, 3 non free roblox made items, 1k place visits, has premium, or 2 past usernames
 
-If you don't have a Roblox account that meets these requirements, go to services/Roblox/Roblox.Services/Users/ApplicationProcessorService.cs, and edit line 99 to be true instead of false. This will enable always autoaccept.
+If you don't have a Roblox account that meets these requirements, go to services/Roblox/Roblox.Services/Users/ApplicationProcessorService.cs, and edit line 100 to be true instead of false. This will enable always autoaccept.
 
 Once you made the application and then refreshed a second or two later, it should be accepted. Make SURE to name it ```ROBLOX``` in ALL CAPS! Not doing this can cause some issues.
 
@@ -56,9 +58,9 @@ Now that you've set everything up, go to the admin panel at http://localhost:500
 
 Now we shall continue setting up the site.
 
-Step 7. To start up the AssetValidationService, go to services/AssetValidationServiceV2 in a cmd/terminal, then run ```go run main.go```. This will start up asset validation service, and will allow you to upload items.
+Step 8. To start up the AssetValidationService, go to services/AssetValidationServiceV2 in a cmd/terminal, then run ```go run main.go```. This will start up asset validation service, and will allow you to upload items.
 
-Step 8. RCC/Rendering setup time: Go to services/RCCService, in a command prompt, then run ```RCCService.exe -console -placeid:1818```.  If everything was correctly, RCCService should start up. Go to services/game-server, and add a file named config.json. Put this in it:
+Step 9. RCC/Rendering setup time: Go to services/RCCService, in a command prompt, then run ```RCCService.exe -console -placeid:1818```.  If everything was correctly, RCCService should start up. Go to services/game-server, and add a file named config.json. Put this in it:
 ```
 {
     "rcc": "rcc path here",
@@ -72,11 +74,11 @@ Step 8. RCC/Rendering setup time: Go to services/RCCService, in a command prompt
 }
 ```
 
-
+Make sure the the authorization and websiteBotAuth are the same in appsettings.json file in services/Roblox/Roblox.Website.
 
 Once that's done, in services/game-server, run ```npm i```, then ```npm run build```, then ```npm run start```. If everything is correctly, in a few seconds you should see "[info] new connection" in the console of game-server. Request a render, and if everything went properly, it will work.
 
-Step 9. To finish the frontend, open services/2016-roblox-main in a terminal, then run ```npm i``` this will show the main page and fix the Network error.
 
 
-Note that you will need to configure a lot more things, Also games that you play will redirect to roblox. anyways these are just the basics
+
+Note that you will need to configure a lot more things, Also games that you try to play will redirect to roblox. anyways these are just the basics
