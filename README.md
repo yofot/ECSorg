@@ -17,6 +17,11 @@ You will need the following dependencies:
 - Go/GoLang (1.18+)
 - .NET/dotnet (6, 7 support might be added soon.)
 
+ # HEADS UP
+
+ i would reconmend uninstalling anything that uses sql like xampp and stuff
+
+ 
 Step 1. Create a user and database in PostgreSQL, make sure login is enabled for it. Once that's done, put a file in services/api named config.json. Put this in it (replacing the DB, User, and Pass with your credentials):
 ```
 {
